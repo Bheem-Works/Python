@@ -1,2 +1,15 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# This file configures Git attributes for the Python repository
+# It specifies how Git should handle different file types during operations like line ending normalization and diffing
+# The comment indicates that rules for Python files (.py) should follow in this configuration file
+# Python files
+*.py text eol=lf
+*.pyc binary
+*.pyo binary
+__pycache__/ export-ignore
+
+# Virtual environment
+venv/ export-ignore
+env/ export-ignore
