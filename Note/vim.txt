@@ -1,0 +1,2 @@
+today is the twenty seven december and i am learning the class and the object and the file handling in the python
+hello vim
