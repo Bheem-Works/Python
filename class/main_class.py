@@ -16,3 +16,4 @@ car1.model = "Corolla"
 print(car1.brand,car1.model)
 
 # but with using the init method it easier to create object with the initial value 
+

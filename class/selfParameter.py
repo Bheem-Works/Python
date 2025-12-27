@@ -22,3 +22,21 @@ class Cat:
 
 miso = Cat('miso','egg','calf')
 print(miso.name,miso.food,miso.color)
+
+
+# Call one method from another method using self:
+
+class Student:
+    def __init__ (self,name,adress):
+        self.name = name
+        self.adress = adress
+
+    def greet(self):
+        return "Hello " + self.name + ". "
+    
+    def introduce(self):
+        michi = self.greet()
+        print(michi + "Welcome to the terminal")
+
+std = Student('miso','12th')
+std.introduce()
