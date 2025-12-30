@@ -52,3 +52,36 @@ student = Student("Vim")
 student.set_grade(85)
 print(student.get_grade())
 print(student.is_passing())
+
+# Protected Properties
+# Python also has a convention for protected properties using a single underscore _ prefix:
+
+class Kim:
+    def __init__(self,name,salary):
+        self.name = name
+        self._salary = salary # Protected property
+
+m1 = Kim("Vim",50000)
+print(m1.name)
+print(m1._salary)
+
+
+class Calculator:
+    def __init__(self):
+        self.result = 0
+    def calculate(self,num):
+        if not isinstance(num,(int,float)):
+            return False
+        return True
+    
+    def add(self,num):
+        if self.calculate(num):
+            self.result += num
+        else:
+            print("Invalid input")
+
+
+calc = Calculator()
+calc.add(10)
+calc.add(20)
+print(calc.result)
