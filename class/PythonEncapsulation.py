@@ -85,3 +85,20 @@ calc = Calculator()
 calc.add(10)
 calc.add(20)
 print(calc.result)
+
+# Name Mangling
+
+# Name mangling is how Python implements private properties and methods.
+
+# When you use double underscores __, Python automatically renames it internally by adding _ClassName in front.
+
+# For example, __age becomes _Person__age.
+
+class Food:
+    def __init__(self,name,color):
+        self.name = name
+        self._color = color
+    
+f1 = Food("Apple","Red")
+print(f1._Food_color)
+
