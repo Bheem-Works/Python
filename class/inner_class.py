@@ -25,25 +25,47 @@ class Car:
     def __init__(self,brand,model):
         self.brand = brand
         self.model = model
-        self.engine = self.Engine()
+        self.engine = self.Engine(self)
     
     class Engine:
-        def __init__(self):
+        def __init__(self, car):
             self.status = 'off'
+            self.car = car
         def start(self):
             self.status = 'running'
             print('engine started')
         def stop(self):
-            self.staus = 'off'
+            self.status = 'off'
             print('engine stopped')
         
         def drive(self):
             if self.status == 'running':
-                print(f"Driving the {self.brand} {self.model}")
+                print(f"Driving the {self.car.brand} {self.car.model}")
             else:
                 print("Start the engine first!")
 
 car = Car('Toyota','Camry')
-print(car.drive())
-print(car.engine.start())
-print(car.drive())
+car.engine.drive()
+car.engine.start()
+car.engine.drive()
+
+
+# Multiple inner class 
+
+class Computer:
+    def __init__(self):
+        self.cpu = self.CPU()
+        self.ram = self.RAM()
+    
+    class CPU:
+        def process(self):
+            print("CPU is processing data")
+    
+    class RAM:
+        def load(self):
+            print("RAM is loading data")
+
+computer = Computer()
+print(computer.cpu.process())
+print(computer.ram.load())
+
