@@ -37,3 +37,11 @@ run.mouse.rightClick()
 
 
 
+print('satetement nai print hudaina abo k grnu')
+
+class Cat:
+    def __init__(self,name):
+        self.name = name
+
+my_home_cat = Cat('michi')
+print(my_home_cat.name)
