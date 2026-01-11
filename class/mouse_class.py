@@ -24,16 +24,17 @@ class Computer:
             print('you can scroll to the up and down')
         def stop(self):
             self.status = 'off'
-            print('your mouuse is stop responding')
+            print('your mouse has stopped responding')
         def display(self):
             if self.status == 'running' :
-                print(f"Mouse {self.computer.device}")
+                print(f"Device status: {self.computer.device} is {self.status}")
             else:
                 print('plug in the mouse')
 
 run = Computer('mouse')
 run.mouse.start()
 run.mouse.rightClick()
+run.mouse.display()
 
 
 
