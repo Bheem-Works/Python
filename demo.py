@@ -1,7 +1,9 @@
-print('hello')
 
-hello = 'hello'
-print(hello)
+# Anagram : 'abc' 'cba';
 
-add_number = 2 + 3
-print(add_number)
+def isAnagram(str1,str2):
+    str1 = str1.replace(" ","").lower()
+    str2 = str2.replace(" ","").lower()
+
+    return sorted(str1) == sorted(str2)
+

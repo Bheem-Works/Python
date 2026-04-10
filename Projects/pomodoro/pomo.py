@@ -6,7 +6,7 @@ class PomodoroApp:
         self.root = root
         self.root.title("Advanced Pomodoro Timer")
         self.root.geometry("400x350")
-        self.root.configure(bg="#f0f0f0")
+        self.root.configure(bg="#D617E075")
 
         self.time_left = 1500  # Default 25 minutes
         self.running = False
